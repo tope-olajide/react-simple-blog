@@ -95,13 +95,20 @@ const DisplayAllPosts = () => {
   }
   return (
     <>
-      <h2>All Posts</h2>
       {!allPosts.length ? (
-        <div>
-          <h3>There is nothing to see here!</h3>
-        </div>
+        <section className="no-post">
+          <h1>No Post Found!</h1>
+          <h3>There is nothing to see here.</h3>
+          <br />
+      <br />
+          <section className="button-wrapper">
+      <button onClick={toggleCreateNewPost} className="button">Create New</button>
+      </section>
+        </section>
       ) : (
-        allPosts.map(eachPost => {
+      <div><h1>All Posts</h1>
+        <section className="all-post">
+        {allPosts.map(eachPost => {
           return (
             <Post
               id={eachPost.id}
@@ -112,11 +119,16 @@ const DisplayAllPosts = () => {
               deletePost={deletePost}
             />
           );
-        })
+        })}
+      <section className="button-wrapper">
+      <button onClick={toggleCreateNewPost} className="button">Create New</button>
+      </section>
+        </section>
+        
+        </div>
       )}
-      <br />
-      <br />
-      <button onClick={toggleCreateNewPost}>Create New</button>
+
+      
     </>
   );
 };
