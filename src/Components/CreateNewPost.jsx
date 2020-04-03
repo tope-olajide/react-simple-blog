@@ -2,12 +2,13 @@ import React from "react";
 const CreateNewPost = props => {
   return (
     <>
+    <section className="create-post">
       <form onSubmit={props.savePost}>
         <h1>Create New Post</h1>
         <input
           type="text"
           onChange={props.savePostTitleToState}
-          placeholder="title"
+          placeholder="Title"
           size="39"
           required
           ref={props.getTitle}
@@ -16,7 +17,7 @@ const CreateNewPost = props => {
         <br />
         <textarea
           onChange={props.savePostContentToState}
-          placeholder="content"
+          placeholder="Content"
           rows="8"
           cols="41"
           required
@@ -24,8 +25,10 @@ const CreateNewPost = props => {
         ></textarea>
         <br />
         <br />
-        <button>Save Post</button>
+        <section className="button-wrapper">
+        <button className="button">Save Post</button></section>
       </form>
+      </section>
     </>
   );
 };
