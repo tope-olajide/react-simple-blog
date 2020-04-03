@@ -55,8 +55,8 @@ const DisplayAllPosts = () => {
     toggleModifyPostComponent();
   };
   const savePost = event => {
-    const id = Date.now();
     event.preventDefault();
+    const id = Date.now();
     setAllPosts([...allPosts, { title, content, id }]);
     console.log(allPosts);
     setTitle("");
