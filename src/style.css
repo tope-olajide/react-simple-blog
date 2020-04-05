@@ -1,0 +1,115 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: #f5f5f5;
+  width: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+textarea {
+  height: 200px;
+}
+input[type="text"],
+textarea {
+  display: block;
+  padding: 1rem 0.5rem;
+  border: 0;
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "roboto-regular", sans-serif;
+  font-size: 1.4rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  line-height: 3.8rem;
+  padding: 0 2rem;
+  margin: 0 0.4rem 1.2rem 0;
+  background: #292525;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+.create-post,
+.modify-post {
+  width: 40%;
+  margin: 0 auto;
+}
+.all-post {
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.no-post {
+  margin-top: 20px;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.8rem;
+}
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.3rem;
+  padding: 0;
+  margin: 0;
+}
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.button-wrapper {
+  text-align: center;
+}
+.post-container {
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.post-content {
+  min-height: 200px;
+}
+.post-container p {
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 1000px) {
+  .post-container {
+    width: 40%;
+  }
+  .create-post,
+  .modify-post {
+    width: 80%;
+    margin: 0 auto;
+  }
+  input[type="text"],
+  textarea {
+    display: block;
+    padding: 0.9rem 0.1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .post-container {
+    width: 85%;
+  }
+}

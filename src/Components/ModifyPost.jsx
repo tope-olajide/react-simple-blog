@@ -1,7 +1,7 @@
 import React from "react";
 const ModifyPost = (props) => {
   return (
-    <>
+    <><section className="create-post">
       <form>
         <h1>Modify Post</h1>
         <input type='text'
@@ -22,8 +22,11 @@ const ModifyPost = (props) => {
         ></textarea>
         <br />
         <br />
-        <button onClick ={props.updatePost}>Update Post</button>
+        <section className="button-wrapper">
+        <button className="button" onClick ={props.updatePost}>Update Post</button>
+        </section>
       </form>
+      </section>
     </>
   );
 };
